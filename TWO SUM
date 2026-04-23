@@ -1,4 +1,4 @@
-//TWO SUM - HASHMAP
+//TWO SUM - HASHMAP Leetcode format , inbuilt functions
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         num_map = {}
@@ -10,4 +10,21 @@ class Solution:
                 return [num_map[complement],i]
 
             num_map[nums[i]] = i
+
+//// python code for two sum , non leetcode format 
+
+s ="abcdfgacbd"
+left = 0
+max_len =0
+seen = set()
+    
+for right in range(len(s)):
+    while s[right] in seen:
+        seen.remove (s[left])
+        left +=1
+            
+    seen.add(s[right])
+            
+    max_len = max(max_len , right - left +1)
+print ("yeh le " , max_len)
            
